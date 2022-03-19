@@ -1,0 +1,244 @@
+@-webkit-keyframes fadeout {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Overpass', sans-serif;
+  color: white;
+  background-color: #121417;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card__container {
+  height: 25.9375rem;
+  width: 25.625rem;
+  background-color: #252d37;
+  border-radius: 2rem;
+  position: relative;
+}
+
+@media (max-width: 43.125em) {
+  .card__container {
+    height: auto;
+    width: 20.625rem;
+    border-radius: 2rem;
+  }
+}
+
+.card__container .card__review {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  line-height: 1;
+}
+
+.card__container .card__review__logo {
+  width: 3.125rem;
+  aspect-ratio: 1;
+  background-image: url(../../images/icon-star.svg);
+  background-color: #7c8798;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.card__container .card__review__title {
+  margin-bottom: 1.375rem;
+}
+
+.card__container .card__review__text {
+  color: #959eac;
+  line-height: 1.55;
+  margin-bottom: 1.875rem;
+}
+
+.card__container .card__review__ratings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1.875rem;
+}
+
+.card__container .card__review__ratings button {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  aspect-ratio: 1;
+  width: 3.125rem;
+  color: #959eac;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.card__container .card__review__ratings button:hover {
+  background-color: #fb7413;
+  color: white;
+  cursor: pointer;
+}
+
+.card__container .card__review__ratings button.active {
+  background-color: #7c8798;
+  color: white;
+}
+
+.card__container .card__review__submit {
+  border: none;
+  height: 3.125rem;
+  border-radius: 1.5625rem;
+  background-color: #fb7413;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.card__container .card__review__submit:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #fb7413;
+}
+
+.card__container .card__thanks {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2.1rem;
+  padding-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+}
+
+.card__container .card__thanks__logo {
+  width: 8.75rem;
+  height: 10.625rem;
+  background-image: url(../../images/illustration-thank-you.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.card__container .card__thanks__selectedRate {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fb7413;
+  padding: 1rem;
+  padding-bottom: 0.6rem;
+  border-radius: 1.5rem;
+  margin-bottom: 2.25rem;
+}
+
+.card__container .card__thanks h2 {
+  margin-bottom: 18px;
+}
+
+.card__container .card__thanks__text {
+  color: #959eac;
+  text-align: center;
+  font-size: 15px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.fadeout {
+  visibility: hidden;
+  -webkit-animation-name: fadeout;
+          animation-name: fadeout;
+  -webkit-animation-duration: 600ms;
+          animation-duration: 600ms;
+}
+
+.fadein {
+  -webkit-animation: fadein 600ms forwards;
+          animation: fadein 600ms forwards;
+}
+/*# sourceMappingURL=style.css.map */
